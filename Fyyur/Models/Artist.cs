@@ -1,9 +1,9 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace Fyyur.Models
 {
-    public class Venue
+    public class Artist
     {
         // Use [Key to identify the primary key
         [Key]
@@ -21,7 +21,7 @@ namespace Fyyur.Models
         public string ImageLink { get; set; }
         //public string[] SocialMediaLink { get; set; }
         public string WebsiteLink { get; set; }
-        //public string SeekingTalent { get; set; }
+        //public string SeekingVenue { get; set; }
         public string Description { get; set; }
     }
 }

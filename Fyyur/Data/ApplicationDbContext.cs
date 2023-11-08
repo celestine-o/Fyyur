@@ -11,6 +11,8 @@ namespace Fyyur.Data
         }
 
         public DbSet<Venue> Venues { get; set; }
+        public DbSet<Artist> Artists { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,6 +42,35 @@ namespace Fyyur.Data
                 ImageLink = "https://dnbstories.com/wp-content/uploads/2021/12/sidewalk-lounge-and-bar-ikeja-50x26.jpg"
             }
             );
+
+            modelBuilder.Entity<Artist>().HasData(
+            new Artist
+            {
+                Id = 1,
+                Name = "Burna",
+                City = "Port Harcourt",
+                State = "Rivers",
+                Address = "GRA",
+                Phone = "23480675767",
+                WebsiteLink = "www.burna.com",
+                Description = "Burna is an Afrobeat Singer",
+                ImageLink = "https://i.guim.co.uk/img/media/dbac34d3006580e07209c8883705cdf3869d6d3a/631_2_3096_1858/master/3096.jpg"
+            },
+            new Artist
+            {
+                Id = 2,
+                Name = "Wiz",
+                City = "Port Harcourt",
+                State = "Rivers",
+                Address = "GRA",
+                Phone = "23480675767",
+                WebsiteLink = "www.wiz.com",
+                Description = "Wizkid is an Afrobeat Singer",
+                ImageLink = "https://i.guim.co.uk/img/media/216a6d86592a72e2068cf60a8edc9d42256fa13f/0_272_1707_1023/master/1707.jpg"
+            }
+            );
         }
+
+       
     }
 }

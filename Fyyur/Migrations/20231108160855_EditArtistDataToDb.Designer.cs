@@ -3,6 +3,7 @@ using Fyyur.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fyyur.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231108160855_EditArtistDataToDb")]
+    partial class EditArtistDataToDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -78,18 +81,6 @@ namespace Fyyur.Migrations
                             Phone = "23480675767",
                             State = "Rivers",
                             WebsiteLink = "www.burna.com"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "GRA",
-                            City = "Port Harcourt",
-                            Description = "Wizkid is an Afrobeat Singer",
-                            ImageLink = "https://i.guim.co.uk/img/media/216a6d86592a72e2068cf60a8edc9d42256fa13f/0_272_1707_1023/master/1707.jpg",
-                            Name = "Wiz",
-                            Phone = "23480675767",
-                            State = "Rivers",
-                            WebsiteLink = "www.wiz.com"
                         });
                 });
 
