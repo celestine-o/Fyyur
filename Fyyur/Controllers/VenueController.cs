@@ -18,5 +18,19 @@ namespace Fyyur.Controllers
             List<Venue> objVenueList = _db.Venues.ToList();
             return View(objVenueList);
         }
+
+        public IActionResult View(int? id)
+        {
+            if (id == null || id.Value == 0)
+            {
+                return NotFound();
+            }
+            Venue? venueById = _db.Venues.Find(id);
+            if (venueById == null)
+            {
+                return NotFound();
+            }
+            return View(venueById);
+        }
     }
 }
