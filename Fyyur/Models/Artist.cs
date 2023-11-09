@@ -13,15 +13,31 @@ namespace Fyyur.Models
         [DisplayName("Name")]
         [MaxLength(30)]
         public string Name { get; set; }
+        [DisplayName("City")]
+        [MaxLength(30)]
         public string City { get; set; }
+        [DisplayName("State")]
+        [MaxLength(30)]
         public string State { get; set; }
+        [DisplayName("Address")]
+        [MaxLength(30)]
         public string Address { get; set; }
+        [DisplayName("Phone")]
+        [MaxLength(30)]
         public string Phone { get; set; }
-        //public string[] Genres  { get; set; }
+        [DisplayName("Genres")]
+        [MaxLength(250)]
+        public Genre? Genre  { get; set; }
+        [DisplayName("Image Link")]
         public string ImageLink { get; set; }
-        //public string[] SocialMediaLink { get; set; }
+        [DisplayName("Social Media Link")]
+        public string SocialMediaLink { get; set; }
+        [DisplayName("Website Link")]
         public string WebsiteLink { get; set; }
         //public string SeekingVenue { get; set; }
+        [DisplayName("Description")]
         public string Description { get; set; }
+
+        public virtual ICollection<Show> Shows { get; set;}
     }
 }
