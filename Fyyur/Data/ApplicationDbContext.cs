@@ -12,6 +12,7 @@ namespace Fyyur.Data
 
         public DbSet<Venue> Venues { get; set; }
         public DbSet<Artist> Artists { get; set; }
+        public DbSet<Show> Shows { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

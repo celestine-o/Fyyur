@@ -95,7 +95,7 @@ namespace Fyyur.Controllers
             }
             _db.Artists.Remove(artistById);
             _db.SaveChanges();
-            TempData["success"] = "Venue deleted successfully";
+            TempData["success"] = "Artist deleted successfully";
             return RedirectToAction("Index", "Artist");
         }
     }
